@@ -17,4 +17,10 @@ code = applyColor(code, /\b(package|public|class|static|if|else)\b/g, 'd857cf')
 
 // Types...
 code = applyColor(code, /\b(void|int)\b/g, '1385e2')
+
+// Multiline comments...
+code = applyColor(code, /(\/\*[\s\S]*\*\/)/g, '267703')
+
+// Oneline comments...
+code = applyColor(code, /(\/\/.*?)/g, '267703')
 console.log(code)
