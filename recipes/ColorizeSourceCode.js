@@ -5,4 +5,7 @@ const applyColor = (text, regex, color) => text.replace(
 
 const files = require('./files')
 const text = files.read('sourceCode.html')
-console.log(text)
+
+const codeRegex = /<code>[\s\S]*<\/code>/i
+let code = text.match(codeRegex)[0]
+console.log(code)
