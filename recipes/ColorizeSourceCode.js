@@ -22,5 +22,7 @@ code = applyColor(code, /\b(void|int)\b/g, '1385e2')
 code = applyColor(code, /(\/\*[\s\S]*\*\/)/g, '267703')
 
 // Oneline comments...
-code = applyColor(code, /(\/\/.*?)/g, '267703')
-console.log(code)
+code = applyColor(code, /(\/\/.*?(\n|\r\n))/g, '267703')
+
+const finalContent = text.replace(codeRegex, code)
+files.write('sourceCode.html', finalContent)
