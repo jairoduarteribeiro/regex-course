@@ -11,4 +11,7 @@ let code = text.match(codeRegex)[0]
 
 // Strings...
 code = applyColor(code, /(\".*\")/g, 'ce9178')
+
+// Keywords...
+code = applyColor(code, /\b(package|public|class|static|if|else)\b/g, 'd857cf')
 console.log(code)
