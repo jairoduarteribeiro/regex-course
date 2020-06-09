@@ -14,4 +14,7 @@ code = applyColor(code, /(\".*\")/g, 'ce9178')
 
 // Keywords...
 code = applyColor(code, /\b(package|public|class|static|if|else)\b/g, 'd857cf')
+
+// Types...
+code = applyColor(code, /\b(void|int)\b/g, '1385e2')
 console.log(code)
