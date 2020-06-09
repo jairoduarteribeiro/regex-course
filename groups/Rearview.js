@@ -8,3 +8,6 @@ console.log(text2.match(/(?:lenta)(mente).*\1/gi)) // ?: doesn't store the group
 console.log(text2.match(/(lenta)(mente)/gi))
 console.log(text2.match(/(lenta)(mente)?/gi))
 console.log(text2.replace(/(lenta)(mente)/gi, '$2'))
+
+const text3 = 'abcdefghijkll'
+console.log(text3.match(/(a)(b)(c)(d)(e)(f)(g)(h)(i)(j)(k)(l)\12/g))
